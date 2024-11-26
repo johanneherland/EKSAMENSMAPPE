@@ -1,0 +1,607 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap");
+
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding-top: 100px;
+  }
+
+  #container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #a9bea5;
+    z-index: 999;
+    padding: 0.5em;
+}
+
+/* Venstre del av navbar - søkefelt */
+.searchfield {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.searchfield input[type="text"] {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.searchfield input[type="submit"] {
+    padding: 0.5em 1em;
+    background-color: #486048;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+.searchfield input[type="submit"]:hover {
+    background-color: #334626;
+}
+
+/* Midtdel av navbar - Meny */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    list-style: none;
+}
+
+.menu li {
+    text-align: center;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5em;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    color: #334626;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 100%;
+}
+
+/* Høyre del av navbar - ikoner */
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5em;
+    list-style: none;
+}
+
+.navbar-icons li {
+    text-align: center;
+    list-style: none;
+}
+
+.navbar-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.navbar-icons a:hover {
+    color: #334626;
+}
+
+.navbar-icons i {
+    font-size: 1.5rem;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+/* General layout for the section */
+#popProd {
+    padding: 2em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#popProd h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#popProd p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+/* Layout for the grid of articles */
+#product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 1.5em; /* space between grid items */
+    justify-items: center; /* center grid items horizontally */
+    margin-top: 2em;
+}
+
+/* Style each article produkt */
+.produkt {
+    position: relative; /* To position the heart icon over the image */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px; /* Ensures the produkt doesn't get too wide */
+}
+
+/* Hover effect for the produkt */
+.produkt:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.produkt img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Heart icon for favorites */
+.produkt i.fa-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: #a9bea5;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Heart icon hover effect */
+.produkt i.fa-heart:hover {
+    color: #8b9c87;
+}
+
+/* Title and price styling */
+.produkt h3 {
+    font-size: 1.3em;
+    margin-top: 1em;
+    color: #333;
+}
+
+.produkt li {
+    list-style: none;
+    font-size: 1em;
+    color: #555;
+}
+
+.produkt .price {
+    font-weight: bold;
+    color: #000000; /* Price in red color */
+    margin-top: 0.5em;
+}
+
+/* Optional: Styling for the brand (Merke) */
+.produkt .merke {
+    font-style: italic;
+    color: #7f8d81;
+    text-decoration: none;
+}
+
+
+
+
+
+/* General section styling */
+#popCat {
+    padding: 2em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#popCat h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#popCat p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+#popCat a {
+    font-size: 1em;
+    color: #8b9c87;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#popCat a:hover {
+    text-decoration: underline;
+}
+
+/* Flexbox for the category cards layout */
+.category-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+/* Individual category card styling */
+.category {
+    position: relative;
+    width: 30%; /* Each card will take up 30% of the container */
+    height: 250px; /* Fixed height for the cards */
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styling for the category image and text */
+.category .category-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease;
+}
+
+.category h3 {
+    position: absolute;
+    bottom: 15px; /* Position the title at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow to make text more readable */
+    margin: 0;
+    z-index: 1;
+}
+
+.category:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+
+
+
+
+/* General styling for the reviews section */
+#reviews {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#reviews h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#reviews p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+#reviews a {
+    font-size: 1em;
+    color: #8b9c87;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#reviews a:hover {
+    text-decoration: underline;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 2em;
+    margin-top: 2em;
+    padding: 1em
+}
+
+/* Review card layout */
+.review {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5em;
+    width: 100%;
+    max-width: 350px; /* Limit the card width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for each card */
+.review:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the images inside the review cards */
+.review img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5em; /* Space between the image and the text */
+}
+
+/* Styling for the review text */
+.review h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.review p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6em;
+    text-align: center;
+}
+
+/* Responsive Design for smaller screens */
+
+@media (max-width: 480px) {
+    .reviews article {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Breadcrumb navigation */
+.breadcrumb {
+    padding: 1em;
+    background-color: #f0f0f0;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9em;
+    margin-right: 0.5em;
+}
+
+.breadcrumb a:last-child {
+    font-weight: bold;
+}
+
+/* Product view section */
+.product-view {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 2em;
+}
+
+.product-images {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.large-image {
+    width: 600px;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.small-images {
+    display: flex;
+    gap: 1em;
+}
+
+.small-images img {
+    width: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.small-images img:hover {
+    transform: scale(1.05);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 1.1em;
+}
+
+.product-info h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* Suggestions section */
+.product-suggestions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2em;
+    gap: 1.5em;
+}
+
+.product-suggestions article {
+    flex: 1 1 calc(25% - 1.5em); /* Four items per row with spacing */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-suggestions article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-suggestions img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.product-suggestions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-suggestions li {
+    margin-bottom: 0.5em;
+}
+
+.product-suggestions a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-view {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .large-image {
+        width: 100%;
+    }
+
+    .small-images {
+        justify-content: center;
+    }
+
+    .product-suggestions {
+        gap: 1em;
+    }
+
+    .product-suggestions article {
+        flex: 1 1 calc(50% - 1em); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-suggestions article {
+        flex: 1 1 100%; /* Single column layout on very small screens */
+    }
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    background-color: #a9bea5;
+    z-index: 999;
+    padding: 0.5em;
+}
+
+footer {
+    background-color: #222f25; /* Mørkere farge på footer for kontrast */
+    color: #fff;
+    padding: 2em 1em;
+    display: grid;
+    grid-template-rows: auto auto; /* Lager to rader, en for logo og ingress og en for footerinnhold */
+    gap: 1em;
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#bottom-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+#bottom-links section h4 {
+    margin-bottom: 0.5em; /* Gir rom under seksjonsoverskrifter */
+    font-size: 1.2em;
+    color: #d4d4d4;
+}
+
+#bottom-links section a, i {
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.some {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2em
+}
+
+
+

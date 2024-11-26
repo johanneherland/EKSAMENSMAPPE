@@ -7,213 +7,250 @@
     <link rel="stylesheet" href="ikoner/css/solid.css"> <!-- CSS-fil for ikoner -->
     <link rel="stylesheet" href="ikoner/css/fontawesome.css"> <!-- Kobler til FontAwesome CSS-fil for ikonbruk -->
     <link rel="stylesheet" href="ikoner/css/brands.css"> <!-- Kobler til brands i FontAwesome -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
-        <!--SØKEFELT-->
-        <form>
+    <!--NAVIGASJON MED LOGO plassert i midten av menypunktene og ikoner-->
+    <nav class="navbar">
+        <form class="searchfield"> <!--SØKEFELT-->
             <input type="text" placeholder="Søk...">
+            <input type="submit">
         </form>
-        <!--NAVIGASJON MED LOGO plassert i midten av menypunktene og ikoner-->
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Hjem</a>
-                </li>
-                <li>
-                    <a href="#popProd">Produkter</a>
-                </li>
-                <li>
-                    <a href="index.html" class="logo"><img src="https://picsum.photos/id/239/100/100" alt="logo"></a>
-                </li>
-                <li>
-                    <a href="#popCat">Kategorier</a>
-                </li>
-                <li>
-                    <a href="#footer">Kontakt oss</a>
-                </li>
-                <li>
-                    <a href="checkout.html">
-                        <i class="fa-solid fa-basket-shopping"></i> <!-- Handlekurv-ikon -->
-                        <span>Handlekurv</span> <!-- Forklarer ikonets funksjon -->
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <ul class="menu">
+            <li>
+                <a href="index.html">Hjem</a>
+            </li>
+            <li>
+                <a href="#popProd">Produkter</a>
+            </li>
+            <li>
+                <a href="index.html" class="logo"><img src="https://picsum.photos/id/239/100/100" alt="logo"></a>
+            </li>
+            <li>
+                <a href="#popCat">Kategorier</a>
+            </li>
+            <li>
+                <a href="#footer">Kontakt oss</a>
+            </li>
+        </ul>
+        <ul class="navbar-icons">
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-house" aria-label="Hjem-ikon"></i> <!-- Hus-ikon for "Hjem" -->
+                    <span>Hjem</span> <!-- Tekst for å støtte ikonet; viktig for tilgjengelighet og forståelighet -->
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-heart" aria-label="Favoritt-ikon"></i> <!-- Favoritt-ikon -->
+                    <span>Favoritter</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-user" aria-label="Bruker-ikon"></i> <!-- Bruker-ikon -->
+                    <span>Min konto</span> <!-- Indikerer brukerkonto-tilgang -->
+                </a>
+            </li>
+            <li>
+                <a href="checkout.html">
+                    <i class="fa-solid fa-basket-shopping" aria-label="Handlekurv"></i> <!-- Handlekurv-ikon -->
+                    <span>Handlekurv</span> <!-- Forklarer ikonets funksjon -->
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header id="banner">
+        <h1>Velkommen til siden!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p>
+        <a href="#">Les mer</a>
     </header>
     
     <main>
-
-        <section id="banner">
-            <h1>Velkommen til siden!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p>
-            <a href="#">Les mer</a>
-        </section>
 
         <section id="popProd">
             <h2>Populære produkter</h2> <!-- Underoverskrift for populære produkter -->
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress for å beskrive produktene -->
             <a href="#">Les mer</a> <!-- Link for å lese mer om produktene -->
-            <article>
-                <a href="#">
-                    <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
-                    <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
-                </a>
-                <ul>
-                    <li>Merke</li> <!-- Merket for produktet -->
-                    <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
-                    <li>Kr 999</li> <!-- Prisinformasjon -->
-                </ul>
-            </article>
-            <article>
-                <a href="#">
-                    <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
-                    <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
-                </a>
-                <ul>
-                    <li>Merke</li> <!-- Merket for produktet -->
-                    <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
-                    <li>Kr 999</li> <!-- Prisinformasjon -->
-                </ul>
-            </article>
-            <article>
-                <a href="#">
-                    <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
-                    <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
-                </a>
-                <ul>
-                    <li>Merke</li> <!-- Merket for produktet -->
-                    <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
-                    <li>Kr 999</li> <!-- Prisinformasjon -->
-                </ul>
-            </article>
-            <article>
-                <a href="#">
-                    <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
-                    <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
-                </a>
-                <ul>
-                    <li>Merke</li> <!-- Merket for produktet -->
-                    <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
-                    <li>Kr 999</li> <!-- Prisinformasjon -->
-                </ul>
-            </article>
-            <article>
-                <a href="#">
-                    <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
-                    <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
-                </a>
-                <ul>
-                    <li>Merke</li> <!-- Merket for produktet -->
-                    <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
-                    <li>Kr 999</li> <!-- Prisinformasjon -->
-                </ul>
-            </article>
-            <article>
-                <a href="#">
-                    <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
-                    <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
-                </a>
-                <ul>
-                    <li>Merke</li> <!-- Merket for produktet -->
-                    <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
-                    <li>Kr 999</li> <!-- Prisinformasjon -->
-                </ul>
-            </article>
+            <button type="button">Vis alle</button>
+            <button type="button">Grønne</button>
+            <button type="button">Gule</button>
+            <button type="button">Røde</button>
+            <button type="button">Blå</button>
+            <div id="product">
+                <article class="produkt">
+                    <a href="#">
+                        <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
+                        <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+                    </a>
+                    <ul>
+                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
+                        <li>Kr 999</li> <!-- Prisinformasjon -->
+                    </ul>
+                </article>
+                <article class="produkt">
+                    <a href="#">
+                        <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
+                        <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+                    </a>
+                    <ul>
+                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
+                        <li>Kr 999</li> <!-- Prisinformasjon -->
+                    </ul>
+                </article>
+                <article class="produkt">
+                    <a href="#">
+                        <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
+                        <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+                    </a>
+                    <ul>
+                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
+                        <li>Kr 999</li> <!-- Prisinformasjon -->
+                    </ul>
+                </article>
+                <article class="produkt">
+                    <a href="#">
+                        <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
+                        <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+                    </a>
+                    <ul>
+                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
+                        <li>Kr 999</li> <!-- Prisinformasjon -->
+                    </ul>
+                </article>
+                <article class="produkt">
+                    <a href="#">
+                        <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
+                        <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+                    </a>
+                    <ul>
+                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
+                        <li>Kr 999</li> <!-- Prisinformasjon -->
+                    </ul>
+                </article>
+                <article class="produkt">
+                    <a href="#">
+                        <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
+                        <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+                    </a>
+                    <ul>
+                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
+                        <li>Kr 999</li> <!-- Prisinformasjon -->
+                    </ul>
+                </article>
+            </div>
         </section>
 
+
         <section id="popCat">
-        <section id="popular">
-            <h2>Populære produkter</h2> <!-- Underoverskrift for populære kategorier -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress for å beskrive kategoriene -->
-            <a href="#">Les mer</a> <!-- Link for å lese mer om produktene -->
-            <article>
-                <img src="https://picsum.photos/400/400" alt="populær produktkategori"> <!-- Bilde for populær kategori -->
-                <h3>Kategorinavn</h3> <!-- Navn på populær kategori -->
-             </article>
-            <article>
-                <img src="https://picsum.photos/400/400" alt="populær produktkategori"> <!-- Bilde for populær kategori -->
-                <h3>Kategorinavn</h3> <!-- Navn på populær kategori -->
-            </article>
-            <article>
-                <img src="https://picsum.photos/400/400" alt="populær produktkategori"> <!-- Bilde for populær kategori -->                    
-                <h3>Kategorinavn</h3> <!-- Navn på populær kategori -->
+            <h2>Populære kategorier</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p>
+            <a href="#">Les mer</a>
+        
+            <div class="category-cards">
+                <article class="category">
+                    <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
+                    <h3>Kategorinavn</h3>
                 </article>
-           <article>
-                <img src="https://picsum.photos/400/400" alt="populær produktkategori"> <!-- Bilde for populær kategori -->
-                <h3>Kategorinavn</h3> <!-- Navn på populær kategori -->
-            </article>
-            <article>
-                <img src="https://picsum.photos/400/400" alt="populær produktkategori"> <!-- Bilde for populær kategori -->
-                <h3>Kategorinavn</h3> <!-- Navn på populær kategori -->
-            </article>
-            <article>
-                <img src="https://picsum.photos/400/400" alt="populær produktkategori"> <!-- Bilde for populær kategori -->
-                <h3>Kategorinavn</h3> <!-- Navn på populær kategori -->
-            </article>
+                <article class="category">
+                    <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
+                    <h3>Kategorinavn</h3>
+                </article>
+                <article class="category">
+                    <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
+                    <h3>Kategorinavn</h3>
+                </article>
+                <article class="category">
+                    <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
+                    <h3>Kategorinavn</h3>
+                </article>
+                <article class="category">
+                    <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
+                    <h3>Kategorinavn</h3>
+                </article>
+                <article class="category">
+                    <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
+                    <h3>Kategorinavn</h3>
+                </article>
+            </div>
         </section>
+        
 
         <section id="reviews">
             <h2>Anmeldelser</h2> <!-- Underoverskrift for kundeanmeldelser -->
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress for å beskrive anmeldelsene -->
-            <a href="#">Les mer</a> <!-- Link for å lese flere anmeldelser -->
-            <article>
-                <img src="https://picsum.photos/400/400" alt="anmelderbilde"> <!-- Anmelderbilde -->
-                <h3>Lorem impsum</h3> <!-- Overskrift for anmeldelse -->
-                <p>dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent lobortis nulla ultricies, maximus nisi feugiat, euismod lacus.</p> <!--Avsnitt med selve anmeldelsen-->
-            </article>
-            <article>
-                <img src="https://picsum.photos/400/400" alt="anmelderbilde"> <!-- Anmelderbilde -->
-                <h3>Lorem impsum</h3> <!-- Overskrift for anmeldelse -->
-                <p>dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent lobortis nulla ultricies, maximus nisi feugiat, euismod lacus.</p> <!--Avsnitt med selve anmeldelsen-->
-            </article>
-            <article>
-                <img src="https://picsum.photos/400/400" alt="anmelderbilde"> <!-- Anmelderbilde -->
-                <h3>Lorem impsum</h3> <!-- Overskrift for anmeldelse -->
-                <p>dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent lobortis nulla ultricies, maximus nisi feugiat, euismod lacus.</p> <!--Avsnitt med selve anmeldelsen-->
-            </article>
-            <article>
-                <img src="https://picsum.photos/400/400" alt="anmelderbilde"> <!-- Anmelderbilde -->
-                <h3>Lorem impsum</h3> <!-- Overskrift for anmeldelse -->
-                <p>dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent lobortis nulla ultricies, maximus nisi feugiat, euismod lacus.</p> <!--Avsnitt med selve anmeldelsen-->
-            </article>
+            <a href="#">Les flere anmeldelser</a> <!-- Link for å lese flere anmeldelser -->
+            <div class="reviews">
+                <article class="review">
+                    <img src="https://picsum.photos/400/400" alt="anmelderbilde"> <!-- Anmelderbilde -->
+                    <h3>Lorem impsum</h3> <!-- Overskrift for anmeldelse -->
+                    <p>dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent lobortis nulla ultricies, maximus nisi feugiat, euismod lacus.</p> <!--Avsnitt med selve anmeldelsen-->
+                </article>
+                <article class="review">
+                    <img src="https://picsum.photos/400/400" alt="anmelderbilde"> <!-- Anmelderbilde -->
+                    <h3>Lorem impsum</h3> <!-- Overskrift for anmeldelse -->
+                    <p>dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent lobortis nulla ultricies, maximus nisi feugiat, euismod lacus.</p> <!--Avsnitt med selve anmeldelsen-->
+                </article>
+                <article class="review">
+                    <img src="https://picsum.photos/400/400" alt="anmelderbilde"> <!-- Anmelderbilde -->
+                    <h3>Lorem impsum</h3> <!-- Overskrift for anmeldelse -->
+                    <p>dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent lobortis nulla ultricies, maximus nisi feugiat, euismod lacus.</p> <!--Avsnitt med selve anmeldelsen-->
+                </article>
+                <article class="review">
+                    <img src="https://picsum.photos/400/400" alt="anmelderbilde"> <!-- Anmelderbilde -->
+                    <h3>Lorem impsum</h3> <!-- Overskrift for anmeldelse -->
+                    <p>dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent lobortis nulla ultricies, maximus nisi feugiat, euismod lacus.</p> <!--Avsnitt med selve anmeldelsen-->
+                </article>
+            </div>
         </section>
 
     </main>
     
-    <footer>
+    <footer id="footer">
         <section><!--Logo og ingress-->
-            <a href="index.html">Logo</a>
-            <p>Lorem ipsum</p>
+            <a href="index.html" class="logo"><img src="https://picsum.photos/id/239/100/100?grayscale" alt="logo"></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </section> 
-        <section> <!-- Kontaktinfo -->
-            <p>B R A Veien 4</p>
-            <p>1757 Halden</p>
-        </section> 
-        <section>
-            <a href="index.html">Hjem</a> <!-- Link tilbake til hovedside -->
-            <a href="#popProd">Populære produkter</a> <!-- Link til seksjonen med populære produkter -->
-            <a href="#popCat">Populære kategorier</a> <!-- Link til seksjonen med populære kategorier -->
-            <a href="#reviews">Anmeldelser</a> <!-- Link til seksjonen med anmeldelser -->
-            <a href="checkout.html">Handlekurv</a> <!-- Link til handlekurv -->
-        </section> <!-- Snarveier -->
-        <section> 
-            <ul class="some"> <!-- Sosiale medier -->
-                <a href="facebook.com">
-                <li><i class="fa-brands fa-facebook-f"></i></li> <!-- Facebook-ikon -->
-                </a>
-                <a href="instagram.com">
-                <li><i class="fa-brands fa-instagram"></i></li> <!-- Instagram-ikon -->
-                </a>
-                <a href="linkedin.com">
-                <li><i class="fa-brands fa-linkedin"></i></li> <!-- Linkedin-ikon -->
-                </a>
-                <a href="pinterest.com">
-                <li><i class="fa-brands fa-pinterest-p"></i></li> <!-- Pinterest-ikon -->
-                </a>
-            </ul>
-        </section> 
+        <div id="bottom-links">
+            <section> <!-- Kontaktinfo -->
+                <h4>Kontakt</h4>
+                <i class="fa-solid fa-map" aria-label="adresse-ikon"> B R A Veien 4, 1757 Halden</i>
+                <i class="fa-solid fa-phone" aria-label="telefon-ikon"> 69 60 80 00</i>
+                <i class="fa-solid fa-envelope" aria-label="epost-ikon"> halden@hiof.no</i>
+                <i class="fa-solid fa-clock" aria-label="åpningstid-ikon"> 08:00 - 17:00</i>
+            </section> 
+            <section>
+                <h4>Snarveier</h4>
+                <a href="index.html"> Hjem</a> <!-- Link tilbake til hovedside -->
+                <a href="#popProd"> Populære produkter</a> <!-- Link til seksjonen med populære produkter -->
+                <a href="#popCat"> Populære kategorier</a> <!-- Link til seksjonen med populære kategorier -->
+                <a href="#reviews"> Anmeldelser</a> <!-- Link til seksjonen med anmeldelser -->
+                <a href="checkout.html"> Handlekurv</a> <!-- Link til handlekurv -->
+            </section> <!-- Snarveier -->
+            <section> 
+                <h4>Sosiale medier</h4>
+                <ul class="some"> <!-- Sosiale medier -->
+                    <a href="facebook.com">
+                    <li><i class="fa-brands fa-facebook-f" aria-label="Facebook-ikon"></i></li> <!-- Facebook-ikon -->
+                    </a>
+                    <a href="instagram.com">
+                    <li><i class="fa-brands fa-instagram" aria-label="Instagram-ikon"></i></li> <!-- Instagram-ikon -->
+                    </a>
+                    <a href="linkedin.com">
+                    <li><i class="fa-brands fa-linkedin" aria-label="Linkedin-ikon"></i></li> <!-- Linkedin-ikon -->
+                    </a>
+                    <a href="pinterest.com">
+                    <li><i class="fa-brands fa-pinterest-p" aria-label="Pinterest-ikon"></i></li> <!-- Pinterest-ikon -->
+                    </a>
+                </ul>
+            </section> 
+        </div>
     </footer>
 </body>
 </html>

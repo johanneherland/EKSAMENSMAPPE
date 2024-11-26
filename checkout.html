@@ -4,11 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link rel="stylesheet" href="ikoner/css/solid.css"> <!-- CSS-fil for ikoner -->
+    <link rel="stylesheet" href="ikoner/css/fontawesome.css"> <!-- Kobler til FontAwesome CSS-fil for ikonbruk -->
+    <link rel="stylesheet" href="ikoner/css/brands.css"> <!-- Kobler til brands i FontAwesome -->
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <!-- SAMME GLOBALE HEADER SOM PÅ HOVEDSIDEN -->
+    <header>
+        <!--NAVIGASJON MED LOGO plassert i midten av menypunktene og ikoner-->
+            <nav class="navbar">
+                <form class="searchfield"> <!--SØKEFELT-->
+                    <input type="text" placeholder="Søk...">
+                    <input type="submit">
+                </form>
+                <ul class="menu">
+                    <li>
+                        <a href="index.html">Hjem</a>
+                    </li>
+                    <li>
+                        <a href="#popProd">Produkter</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="logo"><img src="https://picsum.photos/id/239/100/100" alt="logo"></a>
+                    </li>
+                    <li>
+                        <a href="#popCat">Kategorier</a>
+                    </li>
+                    <li>
+                        <a href="#footer">Kontakt oss</a>
+                    </li>
+                </ul>
+                <ul class="navbar-icons">
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-house" aria-label="Hjem-ikon"></i> <!-- Hus-ikon for "Hjem" -->
+                            <span>Hjem</span> <!-- Tekst for å støtte ikonet; viktig for tilgjengelighet og forståelighet -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-heart" aria-label="Favoritt-ikon"></i> <!-- Favoritt-ikon -->
+                            <span>Favoritter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-user" aria-label="Bruker-ikon"></i> <!-- Bruker-ikon -->
+                            <span>Min konto</span> <!-- Indikerer brukerkonto-tilgang -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="checkout.html">
+                            <i class="fa-solid fa-basket-shopping" aria-label="Handlekurv"></i> <!-- Handlekurv-ikon -->
+                            <span>Handlekurv</span> <!-- Forklarer ikonets funksjon -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    <section>
+        <h2>Din handlekurv</h2>
+        <article>
+            <a href="#">
+                <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
+                <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+            </a>
+            <ul>
+                <a href="#"><li>Merke</li></a> <!-- Merket for produktet -->
+                <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
+                <li>Kr 999</li> <!-- Prisinformasjon -->
+            </ul>
+        </article>
+        <article>
+            <a href="#">
+                <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
+                <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+            </a>
+            <ul>
+                <a href="#"><li>Merke</li></a> <!-- Merket for produktet -->
+                <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
+                <li>Kr 999</li> <!-- Prisinformasjon -->
+            </ul>
+        </article>
+    </section>
 
-    
+    <section>
+        <h3>Personopplysninger</h3>
+        <form>
+            <input type="text" placeholder="fornavn" required>
+            <input type="text" placeholder="etternavn" required>
+            <input type="text" placeholder="gateadresse" required>
+            <input type="text" placeholder="postnummer" required>
+            <input type="text" placeholder="poststed" required>
+            <input type="submit" value="Lagre personopplysninger">
+        </form>
+    </section>
+
+    <section>
+        <h3>Levering</h3>
+        <form>
+            <input type="radio" id="ekspresslevering hjem" name="levering" value="ekspresslevering hjem">
+            <label for="ekspresslevering hjem">ekspresslevering hjem</label>
+            <input type="radio" id="ekspresspakke til utleveringssted" name="levering" value="ekspresspakke til utleveringssted">
+            <label for="ekspresspakke til utleveringssted">ekspresspakke til utleveringssted</label>
+            <input type="radio" id="standard hjemlevering" name="levering" value="standard hjemlevering">
+            <label for="standard hjemlevering">standard hjemlevering</label>
+            <input type="submit" value="Lagre sendingsvalg">
+        </form>
+    </section>
+
+    <section>
+        <h3>Betaling</h3>
+        <form>
+            <input type="text" placeholder="kortnummer" required>
+            <input type="month" required>
+            <input type="password" placeholder="CVV" required>
+            <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
+            <input type="checkbox" id="samtykke" name="samtykke" value="samtykke" required>
+            <label for="samtykke">ja, jeg godtar vilkårene</label>
+            <input type="checkbox" id="markedsføring" name="markedsføring" value="markedsføring">
+            <label for="markedsføring">Ja takk! Send nyhetsbrev til meg</label>
+            <input type="submit" value="Lagre betalingsinformasjon">
+        </form>
+
+    </section>
 
     <!-- SAMME FOOTER SOM HOVEDSIDEN -->
 </body>
