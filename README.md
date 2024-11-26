@@ -1,0 +1,2 @@
+# EKSAMENSMAPPE
+Repository for eksamen
