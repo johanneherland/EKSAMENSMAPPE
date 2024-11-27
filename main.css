@@ -44,7 +44,7 @@
 }
 
 .searchfield input[type="submit"] {
-    padding: 0.5em 1em;
+    padding: 0.5em;
     background-color: #486048;
     border: none;
     border-radius: 5px;
@@ -127,6 +127,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: #f9f9f9;
+    padding: 15rem;
 }
 
 
@@ -662,35 +663,40 @@ section {
 
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 0;
     width: 100%;
-    background-color: #a9bea5;
-    z-index: 999;
-    padding: 0.5em;
-}
-
-footer {
-    background-color: #222f25; /* Mørkere farge på footer for kontrast */
+    background-color: #222f25; /* Darker color for footer */
     color: #fff;
     padding: 2em 1em;
-    display: grid;
-    grid-template-rows: auto auto; /* Lager to rader, en for logo og ingress og en for footerinnhold */
+    display: grid; /* Using grid layout */
+    grid-template-rows: auto auto; /* Two rows: one for logo and one for footer content */
     gap: 1em;
 }
 
 footer section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
+    display: flex;               /* Use flexbox to center items inside the section */
+    flex-direction: column;      /* Stack logo and paragraph vertically */
+    align-items: center;         /* Center the items horizontally */
+    justify-content: center;     /* Center the items vertically (if necessary) */
+    gap: 0.5em;                  /* Add space between logo and paragraph */
 }
 
 #bottom-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
+}
+
+#bottom-links section {
+display: inline-flex;
+align-items: center;  /* Vertically center the content */
+}
+
+#bottom-links i {
+    margin-right: 5px; /* Space between the icon and text */
+}
+
+#bottom-links p {
+    margin: 0;  /* Remove default margin from p elements */
 }
 
 #bottom-links section h4 {
