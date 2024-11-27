@@ -63,26 +63,28 @@
                 </ul>
             </nav>
         </header>
-    <section>
+    <section class="cart">
         <h2>Din handlekurv</h2>
-        <article>
+        <article class="produkt">
             <a href="#">
                 <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
                 <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
             </a>
             <ul>
-                <a href="#"><li>Merke</li></a> <!-- Merket for produktet -->
+                <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                <a href="#" class="merke"><li>Farge</li></a> <!-- Farge på produktet -->
                 <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
                 <li>Kr 999</li> <!-- Prisinformasjon -->
             </ul>
         </article>
-        <article>
+        <article class="produkt">
             <a href="#">
                 <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
                 <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
             </a>
             <ul>
-                <a href="#"><li>Merke</li></a> <!-- Merket for produktet -->
+                <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                <a href="#" class="merke"><li>Farge</li></a> <!-- Farge på produktet -->
                 <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
                 <li>Kr 999</li> <!-- Prisinformasjon -->
             </ul>
@@ -92,11 +94,11 @@
     <section>
         <h3>Personopplysninger</h3>
         <form>
-            <input type="text" placeholder="fornavn" required>
-            <input type="text" placeholder="etternavn" required>
-            <input type="text" placeholder="gateadresse" required>
-            <input type="text" placeholder="postnummer" required>
-            <input type="text" placeholder="poststed" required>
+            <input type="text" placeholder="Fornavn" required>
+            <input type="text" placeholder="Etternavn" required>
+            <input type="text" placeholder="Gateadresse" required>
+            <input type="text" placeholder="Postnummer" required>
+            <input type="text" placeholder="Poststed" required>
             <input type="submit" value="Lagre personopplysninger">
         </form>
     </section>
@@ -117,9 +119,9 @@
     <section>
         <h3>Betaling</h3>
         <form>
-            <input type="text" placeholder="kortnummer" required>
-            <input type="month" required>
-            <input type="password" placeholder="CVV" required>
+            <input type="text" inputmode="numeric" placeholder="kortnummer" minlength="16" maxlength="16" pattern="\d{16}" required>
+            <input type="month" placeholder="utløpsdato" required>
+            <input type="password" placeholder="CVV" pattern="\d*" minlength="3" maxlength="4" required>
             <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
             <input type="checkbox" id="samtykke" name="samtykke" value="samtykke" required>
             <label for="samtykke">ja, jeg godtar vilkårene</label>
