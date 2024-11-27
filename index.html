@@ -21,25 +21,19 @@
                 <a href="index.html">Hjem</a>
             </li>
             <li>
-                <a href="#popProd">Produkter</a>
+                <a href="index.html#popProd">Produkter</a>
             </li>
             <li>
                 <a href="index.html" class="logo"><img src="https://picsum.photos/400/400" alt="logo"></a>
             </li>
             <li>
-                <a href="#popCat">Kategorier</a>
+                <a href="index.html#popCat">Kategorier</a>
             </li>
             <li>
                 <a href="#footer">Kontakt oss</a>
             </li>
         </ul>
         <ul class="navbar-icons">
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-house" aria-label="Hjem-ikon"></i> <!-- Hus-ikon for "Hjem" -->
-                    <span>Hjem</span> <!-- Tekst for å støtte ikonet; viktig for tilgjengelighet og forståelighet -->
-                </a>
-            </li>
             <li>
                 <a href="#">
                     <i class="fa-solid fa-heart" aria-label="Favoritt-ikon"></i> <!-- Favoritt-ikon -->
@@ -60,7 +54,7 @@
             </li>
         </ul>
     </nav>
-    <header id="banner">
+    <header id="top">
         <h1>Velkommen til siden!</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p>
         <a href="#">Les mer</a>
@@ -71,12 +65,11 @@
         <section id="popProd">
             <h2>Populære produkter</h2> <!-- Underoverskrift for populære produkter -->
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress for å beskrive produktene -->
-            <a href="#">Les mer</a> <!-- Link for å lese mer om produktene -->
-            <button type="button">Vis alle</button>
-            <button type="button">Grønne</button>
-            <button type="button">Gule</button>
-            <button type="button">Røde</button>
-            <button type="button">Blå</button>
+            <button type="button"><a href="#">Vis alle</a></button>
+            <button type="button"><a href="#">Grønne</a></button>
+            <button type="button"><a href="#">Gule</a></button>
+            <button type="button"><a href="#">Røde</a></button>
+            <button type="button"><a href="#">Blå</a></button>
             <div id="product">
                 <article class="produkt">
                     <a href="#">
@@ -252,5 +245,7 @@
             </section> 
         </div>
     </footer>
+
+    <a href="#top" id="skip-to-top" title="Go to top">&#8679; Top</a>
 </body>
 </html>

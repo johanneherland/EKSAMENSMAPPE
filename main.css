@@ -123,11 +123,21 @@
 #banner {
     display: flex;
     flex-direction: column;
-    justify-self: center;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f9f9f9;
-    padding: 15rem;
+    justify-content: flex-start; /* Align items at the top of the container */
+    align-items: flex-end; /* Align items to the right of the container */
+    background-color: #c9cec3;
+    padding: 15rem; /* Adjust the padding as needed */
+    width: 100%; /* Ensure it takes full width */
+}
+
+#banner a {
+    padding: 0.5em;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 
@@ -149,6 +159,24 @@
 #popProd p {
     font-size: 1.1em;
     margin-bottom: 1em;
+}
+
+#popProd button {
+    padding: 0.5em;
+    background-color: none;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #000000;
+    font-size: 1rem;
+}
+
+#popProd button a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#popProd button:hover {
+    background-color: #a9bea5;
 }
 
 /* Layout for the grid of articles */
@@ -374,6 +402,7 @@
 .review img {
     width: 100%;
     height: 200px;
+    max-width: 150px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1.5em; /* Space between the image and the text */
@@ -662,63 +691,101 @@ section {
 
 
 
-footer {
+#footer {
     width: 100%;
-    background-color: #222f25; /* Darker color for footer */
+    background-color: #222f25; /* Darker background for footer */
     color: #fff;
     padding: 2em 1em;
-    display: grid; /* Using grid layout */
-    grid-template-rows: auto auto; /* Two rows: one for logo and one for footer content */
+    display: grid; /* Use grid for the footer */
+    grid-template-rows: auto 1fr; /* First row (logo + paragraph), second row (other sections) */
     gap: 1em;
 }
 
 footer section {
-    display: flex;               /* Use flexbox to center items inside the section */
-    flex-direction: column;      /* Stack logo and paragraph vertically */
-    align-items: center;         /* Center the items horizontally */
-    justify-content: center;     /* Center the items vertically (if necessary) */
-    gap: 0.5em;                  /* Add space between logo and paragraph */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
 }
 
-#bottom-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
+footer #bottom-links {
+    display: grid; /* Use grid to arrange the sections side by side */
+    grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+    gap: 1em;
 }
 
-#bottom-links section {
-display: inline-flex;
-align-items: center;  /* Vertically center the content */
+#bottom-links section i {
+    margin-right: 10px; /* Space between the icon and text */
 }
 
-#bottom-links i {
-    margin-right: 5px; /* Space between the icon and text */
+#bottom-links section p {
+    display: inline; /* Ensure paragraph is on the same line as the icon */
+    margin: 0; /* Remove default margin */
+    font-size: 1em; /* Set the font size for better readability */
+ /* Align text vertically with the icon */
 }
 
-#bottom-links p {
-    margin: 0;  /* Remove default margin from p elements */
+/* Styling for the first section (logo and ingress) */
+footer section:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-#bottom-links section h4 {
-    margin-bottom: 0.5em; /* Gir rom under seksjonsoverskrifter */
-    font-size: 1.2em;
-    color: #d4d4d4;
+footer h4 {
+    font-size: larger;
 }
 
-#bottom-links section a, i {
+/* Styling for the social media list */
+footer .some {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+}
+
+footer .some li {
+    font-size: 1.5em;
+}
+
+/* Styling for the anchor tags */
+footer a {
     color: #fff;
     text-decoration: none;
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
 }
 
-.some {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 2em
+footer a:hover {
+    text-decoration: underline;
 }
 
+footer i {
+    font-size: 1em; /* Set icon size */
+}
 
+#skip-to-top {
+    position: fixed;
+    bottom: 20px;      /* Space from the bottom of the page */
+    right: 20px;       /* Space from the right side */
+    padding: 15px 15px;
+    background-color: #222f25; /* Dark background for contrast */
+    color: #fff;
+    font-size: 16px;   /* Font size for visibility */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100%; /* Circular shape */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for emphasis */
+    z-index: 1000;     /* Make sure it stays on top of other elements */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#skip-to-top:hover {
+    background-color: #a9bea5; /* Lighter background on hover */
+    transform: translateY(-5px); /* Slight movement on hover */
+}
+
+#skip-to-top:focus {
+    outline: 2px solid #a9bea5; /* Focus outline for accessibility */
+}
 
