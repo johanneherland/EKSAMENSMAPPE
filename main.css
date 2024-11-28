@@ -33,16 +33,9 @@ body {
 .searchfield {
     display: flex;
     align-items: center;
+
 }
-.searchfield input {
-    border: none;
-    padding: 0em;
-    margin: 0;
-    width: 100%;
-    outline: none;
-    background: transparent;
-    text-align: center;
-}
+
 
 /* Midtdel av navbar - Meny */
 .menu {
@@ -90,6 +83,8 @@ body {
 }
 
 #banner {
+    grid-column: 1/2; /* plasserer header i kolonnen */ 
+    grid-row: 1/2; /* plasserer header i første rad */ 
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align items at the top of the container */
@@ -125,13 +120,21 @@ body {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
 }
+.searchfield input {
+    border: none;
+    padding: 0em;
+    margin: 0;
+    width: 100%;
+    outline: none;
+    background: #50674bdd;
+    text-align: center;
+}
 menu a {
     transition: background 0.3s;
 }
 .menu a:hover {
     color: #334626;
 }
-
 .navbar-icons a {
     transition: color 0.3s;
 }
@@ -290,13 +293,14 @@ i.fa-heart:hover {
 
 #popCat a {
     font-size: 1em;
-    color: #8b9c87;
+    
     text-decoration: none;
     font-weight: bold;
 }
 
 #popCat a:hover {
     text-decoration: underline;
+    color: #8b9c87;
 }
 
 /* Flexbox for the category cards layout */
@@ -585,12 +589,6 @@ section {
     }
 }
 
-@media (max-width: 480px) {
-    .product-suggestions article {
-        flex: 1 1 100%; /* Single column layout on very small screens */
-    }
-}
-
 /* Adjust page layout for spacing */
 header + .cart {
     margin-top: 8em; /* Adds space below the header (if there is one) */
@@ -603,6 +601,7 @@ form {
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
 }
 
 /* Section headers within scoped forms */
@@ -674,7 +673,7 @@ form input[type="radio"] + label {
     form input[type="month"],
     form input[type="password"],
     form input[type="submit"] {
-        max-width: 100%; /* Ensure full width on smaller screens */
+         /* sikrer fullskjerm på mindre skjermer */
     }
 }
 
