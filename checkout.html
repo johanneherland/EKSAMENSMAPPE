@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <div id="grid-container">
     <!-- SAMME GLOBALE HEADER SOM PÅ HOVEDSIDEN -->
     <header>
         <!--NAVIGASJON MED LOGO plassert i midten av menypunktene og ikoner-->
@@ -85,50 +86,89 @@
         </article>
     </section>
 
-    <section>
+        
+    <form class="#betalingsskjemaer">
         <h3>Personopplysninger</h3>
-        <form>
-            <input type="text" placeholder="Fornavn" required>
-            <input type="text" placeholder="Etternavn" required>
-            <input type="text" placeholder="Gateadresse" required>
-            <input type="text" placeholder="Postnummer" required>
-            <input type="text" placeholder="Poststed" required>
-            <input type="submit" value="Lagre personopplysninger">
-        </form>
-    </section>
+        <input type="text" placeholder="Fornavn" required><br>
+        <input type="text" placeholder="Etternavn" required><br>
+        <input type="text" placeholder="Gateadresse" required><br>
+        <input type="text" placeholder="Postnummer" required><br>
+        <input type="text" placeholder="Poststed" required><br>
+        <input type="submit" value="Lagre personopplysninger"><br>
+        <a href="index.html" class="cancel-button">Avbryt</a>
+    </form>
 
-    <section>
+    <form class="#betalingsskjemaer">
         <h3>Levering</h3>
-        <form>
-            <input type="radio" id="ekspresslevering hjem" name="levering" value="ekspresslevering hjem">
-            <label for="ekspresslevering hjem">ekspresslevering hjem</label>
-            <input type="radio" id="ekspresspakke til utleveringssted" name="levering" value="ekspresspakke til utleveringssted">
-            <label for="ekspresspakke til utleveringssted">ekspresspakke til utleveringssted</label>
-            <input type="radio" id="standard hjemlevering" name="levering" value="standard hjemlevering">
-            <label for="standard hjemlevering">standard hjemlevering</label>
-            <input type="submit" value="Lagre sendingsvalg">
-        </form>
-    </section>
+        <input type="radio" id="ekspresslevering hjem" name="levering" value="ekspresslevering hjem">
+        <label for="ekspresslevering hjem">ekspresslevering hjem</label><br>
+        <input type="radio" id="ekspresspakke til utleveringssted" name="levering" value="ekspresspakke til utleveringssted">
+        <label for="ekspresspakke til utleveringssted">ekspresspakke til utleveringssted</label><br>
+        <input type="radio" id="standard hjemlevering" name="levering" value="standard hjemlevering">
+        <label for="standard hjemlevering">standard hjemlevering</label><br>
+        <input type="submit" value="Lagre sendingsvalg">
+    </form>
 
-    <section>
+        
+    <form class="#betalingsskjemaer">
         <h3>Betaling</h3>
-        <form>
-            <input type="text" inputmode="numeric" placeholder="kortnummer" minlength="16" maxlength="16" pattern="\d{16}" required>
-            <input type="month" placeholder="utløpsdato" required>
-            <input type="password" placeholder="CVV" pattern="\d*" minlength="3" maxlength="4" required>
-            <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
-            <input type="checkbox" id="samtykke" name="samtykke" value="samtykke" required>
-            <label for="samtykke">ja, jeg godtar vilkårene</label>
-            <input type="checkbox" id="markedsføring" name="markedsføring" value="markedsføring">
-            <label for="markedsføring">Ja takk! Send nyhetsbrev til meg</label>
-            <input type="submit" value="Lagre betalingsinformasjon">
-            <a href="index.html" class="cancel-button">Avbryt</a>
-        </form>
+        <input type="text" inputmode="numeric" placeholder="kortnummer" minlength="16" maxlength="16" pattern="\d{16}" required><br>
+        <input type="month" placeholder="utløpsdato" required><br>
+        <input type="password" placeholder="CVV" pattern="\d*" minlength="3" maxlength="4" required><br>
+        <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p><br>
+        <input type="checkbox" id="samtykke" name="samtykke" value="samtykke" required>
+        <label for="samtykke">ja, jeg godtar vilkårene</label><br>
+        <input type="checkbox" id="markedsføring" name="markedsføring" value="markedsføring">
+        <label for="markedsføring">Ja takk! Send nyhetsbrev til meg</label><br>
+        <input type="submit" value="Lagre betalingsinformasjon"><br>
+        <a href="index.html" class="cancel-button">Avbryt</a>
+        <p>Å betale inkl. MVA</p>
+        <p id="pris">999 NOK</p>
+    </form>
 
-    </section>
-
-    <!-- SAMME FOOTER SOM HOVEDSIDEN -->
-
-    <a href="#top" id="skip-to-top" title="Go to top">&#8679; Top</a>
+     <!-- SAMME FOOTER SOM HOVEDSIDEN -->
+     <footer id="footer">
+        <section><!--Logo og ingress-->
+            <a href="index.html" class="logo"><img src="https://picsum.photos/400/400" alt="logo"></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section> 
+        <div id="bottom-links">
+            <section> <!-- Kontaktinfo -->
+                <h4>Kontakt</h4>
+                <i class="fa-solid fa-map" aria-label="adresse-ikon"></i><p> B R A Veien 4, 1757 Halden</p>
+                <i class="fa-solid fa-phone" aria-label="telefon-ikon"></i><p> 69 60 80 00</p>
+                <i class="fa-solid fa-envelope" aria-label="epost-ikon"></i> <p> halden@hiof.no</p>
+                <i class="fa-solid fa-clock" aria-label="åpningstid-ikon"></i>  <p> 08:00 - 17:00</p>
+            </section> 
+            <section>
+                <h4>Snarveier</h4>
+                <a href="index.html"> Hjem</a> <!-- Link tilbake til hovedside -->
+                <a href="#popProd"> Populære produkter</a> <!-- Link til seksjonen med populære produkter -->
+                <a href="#popCat"> Populære kategorier</a> <!-- Link til seksjonen med populære kategorier -->
+                <a href="#reviews"> Anmeldelser</a> <!-- Link til seksjonen med anmeldelser -->
+                <a href="checkout.html"> Handlekurv</a> <!-- Link til handlekurv -->
+                <a href="#"> Tilgjengelighetserklæring</a>
+            </section> <!-- Snarveier -->
+            <section> 
+                <h4>Sosiale medier</h4>
+                <ul class="some"> <!-- Sosiale medier -->
+                    <a href="facebook.com">
+                    <li><i class="fa-brands fa-facebook-f" aria-label="Facebook-ikon"></i></li> <!-- Facebook-ikon -->
+                    </a>
+                    <a href="instagram.com">
+                    <li><i class="fa-brands fa-instagram" aria-label="Instagram-ikon"></i></li> <!-- Instagram-ikon -->
+                    </a>
+                    <a href="linkedin.com">
+                    <li><i class="fa-brands fa-linkedin" aria-label="Linkedin-ikon"></i></li> <!-- Linkedin-ikon -->
+                    </a>
+                    <a href="pinterest.com">
+                    <li><i class="fa-brands fa-pinterest-p" aria-label="Pinterest-ikon"></i></li> <!-- Pinterest-ikon -->
+                    </a>
+                </ul>
+            </section> 
+        </div>
+    </footer>
+    <a href="#top" id="skip-to-top" title="Gå tilbake til topp"><i class="fa-solid fa-circle-arrow-up" aria-label="pil til toppen av siden"></i></a>
+</div>
 </body>
 </html>

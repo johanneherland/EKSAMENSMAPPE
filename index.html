@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<div id="grid-container">
     <!--NAVIGASJON MED LOGO plassert i midten av menypunktene og ikoner-->
     <nav class="navbar">
         <form class="searchfield"> <!--SØKEFELT-->
-            <input type="text" placeholder="Søk...">
-            <input type="submit">
+            <input type="search" placeholder="f002">
         </form>
         <ul class="menu">
             <li>
@@ -37,24 +37,25 @@
             <li>
                 <a href="#">
                     <i class="fa-solid fa-heart" aria-label="Favoritt-ikon"></i> <!-- Favoritt-ikon -->
-                    <span>Favoritter</span>
+                    <span>Favs</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class="fa-solid fa-user" aria-label="Bruker-ikon"></i> <!-- Bruker-ikon -->
-                    <span>Min konto</span> <!-- Indikerer brukerkonto-tilgang -->
+                    <span>Konto</span> <!-- Indikerer brukerkonto-tilgang -->
                 </a>
             </li>
             <li>
                 <a href="checkout.html">
                     <i class="fa-solid fa-basket-shopping" aria-label="Handlekurv"></i> <!-- Handlekurv-ikon -->
-                    <span>Handlekurv</span> <!-- Forklarer ikonets funksjon -->
+                    <span>Kurv</span> <!-- Forklarer ikonets funksjon -->
                 </a>
             </li>
         </ul>
     </nav>
-    <header id="top">
+
+    <header id="banner">
         <h1>Velkommen til siden!</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p>
         <a href="#">Les mer</a>
@@ -65,14 +66,25 @@
         <section id="popProd">
             <h2>Populære produkter</h2> <!-- Underoverskrift for populære produkter -->
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress for å beskrive produktene -->
-            <button type="button"><a href="#">Vis alle</a></button>
-            <button type="button"><a href="#">Grønne</a></button>
-            <button type="button"><a href="#">Gule</a></button>
-            <button type="button"><a href="#">Røde</a></button>
-            <button type="button"><a href="#">Blå</a></button>
+            <button type="button"><a href="#popProd">Vis alle</a></button>
+            <button type="button"><a href="#popProd">Grønne</a></button>
+            <button type="button"><a href="#popProd">Gule</a></button>
+            <button type="button"><a href="#popProd">Røde</a></button>
+            <button type="button"><a href="#popProd">Blå</a></button>
             <div id="product">
                 <article class="produkt">
-                    <a href="#">
+                    <a href="#popProd">
+                        <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
+                        <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+                    </a>
+                    <ul>
+                        <a href="#popProd" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
+                        <li>Kr 999</li> <!-- Prisinformasjon -->
+                    </ul>
+                </article>
+                <article class="produkt">
+                    <a href="#popProd">
                         <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
                         <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
                     </a>
@@ -83,56 +95,45 @@
                     </ul>
                 </article>
                 <article class="produkt">
-                    <a href="#">
+                    <a href="#popProd">
                         <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
                         <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
                     </a>
                     <ul>
-                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <a href="#popProd" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
                         <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
                         <li>Kr 999</li> <!-- Prisinformasjon -->
                     </ul>
                 </article>
                 <article class="produkt">
-                    <a href="#">
+                    <a href="#popProd">
                         <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
                         <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
                     </a>
                     <ul>
-                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <a href="#popProd" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
                         <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
                         <li>Kr 999</li> <!-- Prisinformasjon -->
                     </ul>
                 </article>
                 <article class="produkt">
-                    <a href="#">
+                    <a href="#popProd">
                         <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
                         <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
                     </a>
                     <ul>
-                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <a href="#popProd" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
                         <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
                         <li>Kr 999</li> <!-- Prisinformasjon -->
                     </ul>
                 </article>
                 <article class="produkt">
-                    <a href="#">
+                    <a href="#popProd">
                         <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
                         <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
                     </a>
                     <ul>
-                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
-                        <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
-                        <li>Kr 999</li> <!-- Prisinformasjon -->
-                    </ul>
-                </article>
-                <article class="produkt">
-                    <a href="#">
-                        <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
-                        <img src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
-                    </a>
-                    <ul>
-                        <a href="#" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
+                        <a href="#popProd" class="merke"><li>Merke</li></a> <!-- Merket for produktet -->
                         <li><h3>Produktnavn</h3></li> <!-- Navn på produktet -->
                         <li>Kr 999</li> <!-- Prisinformasjon -->
                     </ul>
@@ -144,32 +145,32 @@
         <section id="popCat">
             <h2>Populære kategorier</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p>
-            <a href="#">Les mer</a>
+            <a href="#popCat">Les mer</a>
         
             <div class="category-cards">
                 <article class="category">
                     <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
-                    <h3>Kategorinavn</h3>
+                    <h3>Alle klær</h3>
                 </article>
                 <article class="category">
                     <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
-                    <h3>Kategorinavn</h3>
+                    <h3>Bukser</h3>
                 </article>
                 <article class="category">
                     <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
-                    <h3>Kategorinavn</h3>
+                    <h3>Kjoler</h3>
                 </article>
                 <article class="category">
                     <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
-                    <h3>Kategorinavn</h3>
+                    <h3>Topper</h3>
                 </article>
                 <article class="category">
                     <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
-                    <h3>Kategorinavn</h3>
+                    <h3>Gensere</h3>
                 </article>
                 <article class="category">
                     <div class="category-image" style="background-image: url('https://picsum.photos/400/400');"></div>
-                    <h3>Kategorinavn</h3>
+                    <h3>Sko</h3>
                 </article>
             </div>
         </section>
@@ -178,7 +179,7 @@
         <section id="reviews">
             <h2>Anmeldelser</h2> <!-- Underoverskrift for kundeanmeldelser -->
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress for å beskrive anmeldelsene -->
-            <a href="#">Les flere anmeldelser</a> <!-- Link for å lese flere anmeldelser -->
+            <a href="#reviews">Les flere anmeldelser</a> <!-- Link for å lese flere anmeldelser -->
             <div class="reviews">
                 <article class="review">
                     <img src="https://picsum.photos/400/400" alt="anmelderbilde"> <!-- Anmelderbilde -->
@@ -218,14 +219,15 @@
                 <i class="fa-solid fa-envelope" aria-label="epost-ikon"></i> <p> halden@hiof.no</p>
                 <i class="fa-solid fa-clock" aria-label="åpningstid-ikon"></i>  <p> 08:00 - 17:00</p>
             </section> 
-            <section>
+            <section> <!-- Snarveier -->
                 <h4>Snarveier</h4>
                 <a href="index.html"> Hjem</a> <!-- Link tilbake til hovedside -->
                 <a href="#popProd"> Populære produkter</a> <!-- Link til seksjonen med populære produkter -->
                 <a href="#popCat"> Populære kategorier</a> <!-- Link til seksjonen med populære kategorier -->
                 <a href="#reviews"> Anmeldelser</a> <!-- Link til seksjonen med anmeldelser -->
                 <a href="checkout.html"> Handlekurv</a> <!-- Link til handlekurv -->
-            </section> <!-- Snarveier -->
+                <a href="#"> Tilgjengelighetserklæring</a>
+            </section> 
             <section> 
                 <h4>Sosiale medier</h4>
                 <ul class="some"> <!-- Sosiale medier -->
@@ -246,6 +248,7 @@
         </div>
     </footer>
 
-    <a href="#top" id="skip-to-top" title="Go to top">&#8679; Top</a>
+    <a href="#top" id="skip-to-top" title="Gå tilbake til topp"><i class="fa-solid fa-circle-arrow-up" aria-label="pil til toppen av siden"></i></a>
+</div>
 </body>
 </html>

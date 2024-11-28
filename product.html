@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="ikoner/css/brands.css"> <!-- Kobler til brands i FontAwesome -->
     <link rel="stylesheet" href="main.css">
 </head>
+<div id="gridContainer">
 <body>
     <!-- SAMME GLOBALE HEADER SOM PÅ HOVEDSIDEN -->
     <header>
         <!--NAVIGASJON MED LOGO plassert i midten av menypunktene og ikoner-->
             <nav class="navbar">
                 <form class="searchfield"> <!--SØKEFELT-->
-                    <input type="text" placeholder="Søk...">
+                    <input type="text" placeholder=>
                     <input type="submit">
                 </form>
                 <ul class="menu">
@@ -66,21 +67,19 @@
         <a href="product.html">Produktnavn</a>
     </nav>
 
-    <section class="product-view">
-        <div class="product-images">
-            <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking -->
-            <img class="large-image" src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Hovedbilde av produkt -->
-            <img class="small-image" src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
-            <img class="small-image" src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
-            <img class="small-image" src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
-        </div>
-        <div class="product-info">
-            <h2>Produktnavn</h2> <!-- Produktnavn -->
-            <a href="#">Merke</a> <!-- Merkeinformasjon -->
-            <a href="#">Farge</a> <!-- Fargeinformasjon -->
-            <li>Kr 999</li> <!-- Prisinformasjon -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nisl dolor, lobortis vitae nibh ut, tempor suscipit urna. Praesent mollis bibendum tortor interdum ullamcorper.</p>
-        </div>
+    <section class="produktoversikt">
+        <img class="large-image" src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Hovedbilde av produkt -->
+        <img class="small-image" src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+        <img class="small-image" src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+        <img class="small-image" src="https://picsum.photos/400/400" alt="produktbilde"> <!-- Bilde av produkt -->
+        <br>
+        <i class="fa-solid fa-heart"></i> <!-- Hjerte for favorittmerking av det aktuelle produktet-->
+        <h2>Produktnavn</h2> <!-- Produktnavn -->
+        <a href="#">Merke</a> <!-- Merkeinformasjon -->
+        <a href="#">Farge</a> <!-- Fargeinformasjon -->
+
+        <p id="pris">999 NOK</p> <!-- Prisinformasjon -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nisl dolor, lobortis vitae nibh ut, tempor suscipit urna. Praesent mollis bibendum tortor interdum ullamcorper.</p>
     </section>
 
     <aside>
@@ -151,6 +150,7 @@
                 <a href="#popCat"> Populære kategorier</a> <!-- Link til seksjonen med populære kategorier -->
                 <a href="#reviews"> Anmeldelser</a> <!-- Link til seksjonen med anmeldelser -->
                 <a href="checkout.html"> Handlekurv</a> <!-- Link til handlekurv -->
+                <a href="#"> Tilgjengelighetserklæring</a>
             </section> <!-- Snarveier -->
             <section> 
                 <h4>Sosiale medier</h4>
@@ -171,6 +171,7 @@
             </section> 
         </div>
     </footer>
-    <a href="#top" id="skip-to-top" title="Go to top">&#8679; Top</a>
+    <a href="#top" id="skip-to-top" title="Gå tilbake til topp"><i class="fa-solid fa-circle-arrow-up" aria-label="pil til toppen av siden"></i></a>
 </body>
+</div>
 </html>
